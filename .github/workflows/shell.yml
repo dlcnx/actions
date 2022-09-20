@@ -18,7 +18,7 @@ jobs:
       env:
         key: ${{ shell.KEY }}
       run: |
-        example-command "$key"
+        echo "$key"
 
     - name: Finish
       run: |

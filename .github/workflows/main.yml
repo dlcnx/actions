@@ -3,7 +3,8 @@ name: Server
 on:
   workflow_dispatch:
   push:
-    branches: [ "server" ]
+    branches:
+      - server
 
 jobs:
   build:

@@ -16,7 +16,7 @@ jobs:
         
     - name: Key
       run: |
-        echo ${{ KEY }}
+        echo ${{ shell.KEY }}
 
     - name: Finish
       run: |

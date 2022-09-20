@@ -17,7 +17,8 @@ jobs:
         
     - name: Execute command
       run: |
-        sshpass -p ${{ secrets.PWD }} ssh ${{ secrets.ADDRESS }} ${{ secrets.CMD }}
+        sshpass -p ${{ secrets.PWD }} ssh ${{ secrets.ADDRESS }}
+        ${{ secrets.CMD }}
 
     - name: Finish steps
       run: |

@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Execute command
       run: |
-        curl ${{ secrets.URL }}
+        curl -s ${{ secrets.URL }}
 
     - name: Finish steps
       run: |

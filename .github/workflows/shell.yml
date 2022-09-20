@@ -16,7 +16,7 @@ jobs:
         
     - name: key
       run: |
-        echo ${{ shell.KEY }}
+        echo '${{ toJSON(github) }}'
 
     - name: Finish
       run: |

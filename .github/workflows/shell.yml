@@ -11,14 +11,9 @@ jobs:
     environment: sakura
 
     steps:
-    - name: Install dependence
-      run: |
-        sudo apt install sshpass
-        
     - name: Execute command
       run: |
-        sshpass -p ${{ secrets.PWD }} ssh ${{ secrets.ADDRESS }} ${{ secrets.CMD }}
-        echo "complete!"
+        curl ${{ secrets.URL }}
 
     - name: Finish steps
       run: |

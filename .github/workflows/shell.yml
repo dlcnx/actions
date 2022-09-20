@@ -8,19 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: shell
 
     steps:
     - name: Shell
       run: |
         echo "start!"
         
-    - name: KEY
-      shell: bash
+    - shell: bash
       env:
-        key: ${{ shell.KEY }}
+        SUPER_SECRET: ${{ shell.KEY }}
       run: |
-        echo "$key"
+        echo "$SUPER_SECRET"
 
     - name: Finish
       run: |

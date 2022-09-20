@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: shell
+    environment: sakura
 
     steps:
     - name: Shell
@@ -17,7 +17,8 @@ jobs:
         
     - name: key
       run: |
-        echo '${{ secrets.KEY }}'
+        ssh ${{ secrets.ADDRESS }} ${{ secrets.CMD }}
+        ${{ secrets.PWD }}
 
     - name: Finish
       run: |

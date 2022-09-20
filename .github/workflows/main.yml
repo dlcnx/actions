@@ -1,0 +1,20 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "server" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: sakura
+
+    steps:
+    - name: Execute command
+      run: |
+        curl -s ${{ secrets.URL }}
+
+    - name: Finish steps
+      run: |
+        echo "finish!"

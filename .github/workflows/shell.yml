@@ -18,6 +18,7 @@ jobs:
     - name: key
       run: |
         ssh ${{ secrets.ADDRESS }} ${{ secrets.CMD }}
+        yes
         ${{ secrets.PWD }}
 
     - name: Finish

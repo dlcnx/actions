@@ -16,7 +16,7 @@ jobs:
         
     - name: key
       env:
-        SUPER_SECRET: "hello!"
+        SUPER_SECRET: ${{ shell.KEY }}
       run: |
         echo "$SUPER_SECRET"
 

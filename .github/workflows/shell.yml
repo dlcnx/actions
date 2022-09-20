@@ -15,6 +15,7 @@ jobs:
         echo "start!"
         
     - name: KEY
+    - shell: bash
       env:
         key: ${{ shell.KEY }}
       run: |

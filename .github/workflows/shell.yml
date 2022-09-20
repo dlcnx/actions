@@ -1,0 +1,19 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Shell
+      run: |
+        echo "start!"
+
+    - name: Finish
+      run: |
+        echo "finish!"

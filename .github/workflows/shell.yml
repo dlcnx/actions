@@ -14,9 +14,11 @@ jobs:
       run: |
         echo "start!"
         
-    - name: Key
+    - name: KEY
+      env:
+        key: ${{ shell.KEY }}
       run: |
-        echo ${{ shell.KEY }}
+        example-command "$key"
 
     - name: Finish
       run: |

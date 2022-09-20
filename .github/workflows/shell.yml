@@ -15,10 +15,8 @@ jobs:
         echo "start!"
         
     - name: key
-      env:
-        SUPER_SECRET: ${{ KEY }}
       run: |
-        echo "$SUPER_SECRET"
+        echo ${{ shell.KEY }}
 
     - name: Finish
       run: |
